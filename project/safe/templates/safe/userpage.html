@@ -1,0 +1,54 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vault</title>
+    <link rel="stylesheet" href="{% static 'safe/styles.css' %}">
+</head>
+
+<body>
+    <h1 style="text-align:center;"> <a href="{% url 'home' %}">Password Vault<i class="fas fa-shield-alt"></i></a>
+    </h1>
+    <hr>
+    <div class="container">
+        <div class="search">
+            <input type="text" id="searchbar" placeholder="Find application...">
+        </div>
+        <br>
+        <div class="addform ">
+            <h2 id="modify">Add new <i class="fas fa-angle-down"></i> </h2>
+            <div style='display:none;' class="new-cred ">
+                <form action="{% url 'safe:userpage' %}" method="POST">
+                    {% csrf_token %}
+                    <input type="text" name="website" placeholder="Application / Website Name"> <br>
+                    <input type="text" name="username" placeholder="Username / Email"> <br>
+                    <input type="password" autocomplete="new-password" name="password" placeholder="Password"> <br>
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+        </div>
+        <br>
+
+        <div id="content">
+            <ul id="list">
+                {% for object in objects %}
+                <li>
+                    <p>{{object.website}} </p>
+                    <div class="data">
+                        <span> <b>Username</b> {{object.username}}</span> <br>
+                        <span><b>Password</b> </span> <span class="id{{object.id}}">{{object.password}}</span> <br> <br>
+                        <button id="{{object.id}}" class="id{{object.id}}">Decrypt</button> 
+                    </div>
+                    <hr>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/1a9f4fe2ba.js" crossorigin="anonymous"></script>
+    <script src="{% static 'safe/userpage.js' %}"></script>
+</body>
+
+</html>

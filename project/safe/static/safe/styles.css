@@ -1,0 +1,196 @@
+body{
+    margin:0;
+    padding:0;
+    color:rgb(236, 92, 92);
+}
+ul{
+    list-style-type: none;
+    padding:0;
+    margin:0
+}
+
+
+
+#content p{
+    font-size: large;
+    font-weight: bold;
+}
+
+a{
+    color:rgb(236, 92, 92);
+    text-decoration: none;
+}
+.data{
+    display: none;
+}
+.addform{
+    margin:0 auto;
+    padding:1px;
+    border-radius: 20px;
+    font-family: cursive;
+    color:white;
+    background:rgb(236, 92, 92);
+    text-align:center ;
+}
+.addform input[type=submit]{
+    display: inline-block;
+    margin:auto;
+}
+.forms{
+    width:80%;
+    height: 70%;
+    margin: 0 auto;
+    padding:10px;
+    border-radius: 20px;
+    margin-top:5%;
+    font-family: cursive    ;
+    color:white;
+    background:rgb(236, 92, 92);
+    text-align:center;
+}
+
+.addform h2,.forms h1{
+    text-align:center;
+   font-weight: lighter;
+   font-family: monospace;
+}
+.addform label,.forms label{
+    margin-top:15px;
+    font-size:15px;
+    text-align:left;
+}
+
+.forms a{
+text-decoration:none;
+font-weight: bold;
+color:white;
+
+}
+
+
+#searchbar{
+    padding:10px;
+    margin:auto;
+    border-radius:20px;
+    width:100%;
+    border:2px solid crimson;
+    outline:0;
+    
+}
+.addform input[type=text],.addform input[type=password],.forms input[type=text],.forms input[type=password]{
+    margin-left: 18%;
+    border-radius: 10px;
+    display: block;
+    width:70%;
+    border:none;
+    padding:15px;
+    border-bottom:2px solid rgba(236, 92, 92,0.4);
+    outline:0;
+}
+
+.forms input[type=text]:focus,.forms input[type=password]:focus{
+    border-bottom:2px solid rgb(236, 92, 92);
+    outline: 0;
+}
+
+*{
+    box-sizing:border-box;
+}
+.header a{
+    border-radius:20%;
+    padding:10px;
+    text-decoration:none;
+    border:3px  solid rgb(236, 92, 92);
+    margin:0 10px;
+    color:white;
+    background:rgb(236,92,92);
+    cursor:pointer;
+}
+
+.header a:hover{
+background:white;
+color:rgb(236,92,92);
+}
+
+.container button{
+    outline:0;
+    border-radius:20%;
+    padding:10px;
+    text-decoration:none;
+    border:3px  solid rgb(236, 92, 92);
+    background:rgb(236,92,92);
+    color:white;
+    cursor:pointer;
+}
+
+input[type=submit]{
+    outline:0;
+    border-radius:20%;
+    padding:10px;
+    text-decoration:none;
+    border:3px  solid rgb(236, 92, 92);
+    margin:0 10px;
+    color:rgb(236,92,92);
+    background:white;
+    cursor:pointer;
+}
+
+#content p{
+    cursor: pointer;
+}
+
+.image{
+    margin:auto;
+    height: 40%;
+}
+.image img{
+height: 100%;
+width: 100%;
+}
+.content{
+    margin:auto;
+    width:80%;
+    text-align:center;
+    color:rgb(46, 46, 82);
+    font-family:monospace;
+}
+.new-cred input{
+    display: block;
+}
+.container{
+    color:rgb(46, 46, 82);
+    width: 80%;
+    margin:auto;
+}
+
+@media screen and (min-width:680px){
+    .container{
+        width: 550px;
+        margin: auto;
+    
+    }
+    .image{
+        margin:auto;
+        height: 40%;
+        width:30%;
+    }
+    .image img{
+    height: 100%;
+    width: 100%;
+    }
+    .forms{
+        width: 30%;
+        margin: 5% auto;
+        font-weight: lighter;
+    
+    }
+    .container input[type=text],.container input[type=password],.forms input[type=text],.forms input[type=password]{
+        width:60%;
+    }
+    .forms img{
+        height: 15%;
+        width: 15%;
+    }
+  
+    
+    }

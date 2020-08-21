@@ -1,0 +1,28 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="{% static 'safe/styles.css' %}">
+</head>
+<body>
+    <h1 style="text-align:center;"> <a href="{% url 'home' %}">Password Vault<i class="fas fa-shield-alt"></i></a> </h1>
+    <hr>
+    <div class="forms">
+        <h1>Create account !</h1>
+        <br>
+    <form action="{% url 'signup' %}" method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+        {{field.errors}}
+        {{field.label_tag}}
+        {{field}}
+        {% endfor %}
+        <br><input type="submit" value="Register">
+    </form>
+    <p>Have an account? <a href="{% url 'login' %}">Login</a></p>
+</div>
+<script src="https://kit.fontawesome.com/1a9f4fe2ba.js" crossorigin="anonymous"></script>
+</body>
+</html>
